@@ -1,15 +1,14 @@
 <div ng-app="SvgApp">
-<div class="two columns" >
-  <ul class="nav-bar vertical">
-    <li class="active">
-      Hey
-    </li>
-    <li>
-      Ho
-    </li>
-  </ul>
-</div>
-<div class="nine columns offset-by-one">
-  <div ng-view></div>
-</div>
+  <div ng-controller="SvgCtl" />
+    <div class="two columns" >
+      <ul class="nav-bar vertical">
+        <li ng-repeat="tess in tessellations" ng-class="{active: tess == current }">
+          <a href="#{{tess}}">{{tess}}</a>
+        </li>
+      </ul>
+    </div>
+    <div class="nine columns offset-by-one">
+      <div ng-view></div>
+    </div>
+  </div>
 </div>

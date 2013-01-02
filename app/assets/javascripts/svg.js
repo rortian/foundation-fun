@@ -1,3 +1,6 @@
+var tessellations = [
+  "cm","cmm","p1","p2","p3"
+]
 
 angular.module('SvgApp', [], function($routeProvider){
   $routeProvider
@@ -5,4 +8,15 @@ angular.module('SvgApp', [], function($routeProvider){
     .otherwise({redirectTo:'p6'})
 })
 
-function SvgCtl($scope){}
+function SvgCtl($scope,$route){
+
+  $scope.tessellations = tessellations;
+  $scope.current = "p3";
+
+
+}
+
+SvgCtl.prototype = {
+
+}
+
