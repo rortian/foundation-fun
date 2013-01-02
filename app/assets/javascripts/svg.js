@@ -1,2 +1,8 @@
-// Place all the behaviors and hooks related to the matching controller here.
-// All this logic will automatically be available in application.js.
+
+angular.module('SvgApp', [], function($routeProvider){
+  $routeProvider
+    .when('/p6',{templateUrl:'/tessellation/p6.html'})
+    .otherwise({redirectTo:'p6'})
+})
+
+function SvgCtl($scope){}
