@@ -4,10 +4,10 @@ var tessellations = [
 
 angular.module('SvgApp', [], function($routeProvider){
   for (tess in tessellations){
-    $routeProvider.when("/"+tess,{templateUrl:"/tessellations/"+tess+".html"})
+    var t = tessellations[tess]
+    console.log(t)
+    $routeProvider.when("/"+t,{templateUrl:"/tessellation/"+t+".html"})
   }
-  $routeProvider
-    .otherwise({redirectTo:'p6'})
 })
 
 function SvgCtl($scope,$route){
