@@ -21,4 +21,6 @@ function SvgCtl($scope,$route,$location){
 
 }
 
+SvgCtl.$inject = ['$scope','$route','$location']
+
 
