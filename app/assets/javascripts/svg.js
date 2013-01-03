@@ -1,5 +1,6 @@
 var tessellations = [
-  "cm","cmm","p1","p2","p3","p3m1","p4","p4g","p4m","p6"
+  "cm","cmm","p1","p2","p3","p3m1","p4","p4g","p4m","p6","p6m",
+  "p31m","pg","pgg","pm","pmg","pmm"
 ]
 
 angular.module('SvgApp', [], function($routeProvider){
