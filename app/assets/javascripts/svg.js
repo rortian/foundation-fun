@@ -12,10 +12,6 @@ angular.module('SvgApp', [], function($routeProvider){
 function SvgCtl($scope,$route,$location){
 
   $scope.tessellations = tessellations;
-  $scope.current = "p3";
-  console.log($scope)
-  console.log($route)
-  console.log($location.path().substring(1))
 
   $scope.current_tess = function(item){
     return $location.path().substring(1) == item
