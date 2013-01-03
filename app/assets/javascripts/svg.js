@@ -5,20 +5,23 @@ var tessellations = [
 angular.module('SvgApp', [], function($routeProvider){
   for (tess in tessellations){
     var t = tessellations[tess]
-    console.log(t)
     $routeProvider.when("/"+t,{templateUrl:"/tessellation/"+t+".html"})
   }
 })
 
-function SvgCtl($scope,$route){
+function SvgCtl($scope,$route,$location){
 
   $scope.tessellations = tessellations;
   $scope.current = "p3";
+  console.log($scope)
+  console.log($route)
+  console.log($location.path().substring(1))
+
+  $scope.current_tess = function(item){
+    return $location.path().substring(1) == item
+  }
 
 
 }
 
-SvgCtl.prototype = {
-
-}
 

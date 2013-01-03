@@ -2,7 +2,8 @@
   <div ng-controller="SvgCtl" />
     <div class="two columns" >
       <ul class="nav-bar vertical">
-        <li ng-repeat="tess in tessellations" ng-class="{active: tess == current }">
+        <li ng-repeat="tess in tessellations" 
+            ng-class="{active: current_tess(tess) }">
           <a href="#/{{tess}}">{{tess}}</a>
         </li>
       </ul>
