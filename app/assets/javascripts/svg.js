@@ -3,12 +3,13 @@ var tessellations = [
   "p31m","pg","pgg","pm","pmg","pmm"
 ]
 
-angular.module('SvgApp', [], function($routeProvider){
+angular.module('SvgApp', [])
+  .config(['$routeProvider', function($routeProvider){
   for (tess in tessellations){
     var t = tessellations[tess]
     $routeProvider.when("/"+t,{templateUrl:"/tessellation/"+t+".html"})
   }
-})
+}])
 
 function SvgCtl($scope,$route,$location){
 
